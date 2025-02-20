@@ -4,19 +4,14 @@ import localFont from "next/font/local";
 import "./globals.css";
 import background from "../images/background.png"
 import sign_bg from "../images/sign_bg.png"
-// import tan_sq from "../images/tan_sq.png"
 import og_long_tan from "../images/og_long_tan.png"
-// import og_sign_bg from "../images/og_sign_bg.png"
+import tan_sq from "../images/tan_sq.png"
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
 //   subsets: ["latin"],
 // });
 
-// const geistMono = Geist_Mono({
-//   variable: "--font-geist-mono",
-//   subsets: ["latin"],
-// });
 
 const regFont = localFont({
   src: "../fonts/EBGaramond12-AllSC.ttf",
@@ -57,6 +52,15 @@ export default function RootLayout({
                   priority
                 />
             </div>
+            <div className="absolute bottom-2 -mb-2 left-0 w-full h-[calc(65%-4rem)] flex justify-center items-center opacity-90 blur-lg">
+                <Image 
+                  className="-z-1"
+                  src={tan_sq}
+                  alt="tan background"
+                  width={430}
+                  priority
+                />
+          </div>
             <div className="absolute top-0 left-0 w-full h-full flex justify-center items-center">
                 <Image 
                   className="-z-10"
