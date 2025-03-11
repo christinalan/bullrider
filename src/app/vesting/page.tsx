@@ -1,3 +1,5 @@
+'use client'
+import { useState } from 'react'
 import Image from "next/image";
 import localFont from "next/font/local";
 import star from "../../images/star.png"
@@ -11,6 +13,8 @@ const bullriderFont = localFont({
 })
 
 export default function Vesting() {
+  const [isBuying, setIsBuying] = useState(true);
+
   return (
     <div className="relative min-h-screen w-full pt-8 pb-10 sm:p-20 ">
       <main className="flex flex-col row-start-2 items-center sm:items-start z-10">
@@ -80,8 +84,15 @@ export default function Vesting() {
                   {/* Row 1: Buy and Sell Buttons */}
                   <div className="flex flex-col">
                   <div className={`${bullriderFont.className} flex text-2xl`}>
-                    <button className="w-1/2 pt-1 pb-2 bg-[#812C27] text-[#D7BA94]">Buy</button>
-                    <button className="w-1/2 pt-1 pb-2 text-[#812C27]">Sell</button>
+                    <button 
+                      onClick={() => setIsBuying(true) }
+                      className={`w-1/2 pt-1 pb-2 ${isBuying ? "bg-[#812C27] text-[#D7BA94]": "bg-transparent text-[#812C27]" }`}
+                      
+                      >Buy</button>
+                    <button 
+                      onClick={() => setIsBuying(false) } 
+                      className={`w-1/2 pt-1 pb-2 ${!isBuying ? "bg-[#812C27] text-[#D7BA94]" : "bg-transparent text-[#812C27]"}`}
+                      >Sell</button>
                   </div>
                     <div className="w-[330px] h-[2px] bg-[#812C27]"></div>
                   </div>
@@ -101,13 +112,18 @@ export default function Vesting() {
                         <option value="BTC">BTC</option>
                         <option value="USDT">USDT</option>
                       </select>
-                      <div className="w-[2px] h-[28px] bg-[#812C27] "></div>
-                      <p className="pb-1">Amount to sell in eth</p>
+                      <div className="w-[2px] h-[28px] bg-[#812C27] text-[#812C27]"></div>
+                        <input 
+                            type="number"
+                            placeholder={isBuying ? "Amount to buy in ETH" : "Amount to sell in ETH"}
+                            className="bg-transparent pb-1 outline-none placeholder-[#812C27] placeholder-opacity-70 text-center"
+                          />
                     </div>
 
                   {/* Row 4: Quick Buy Button */}
                   <div className="flex justify-center">
-                    <button className={`w-[150] py-1 rounded-full bg-[#812C27] text-xl ${bullriderFont.className}`}>Quick Buy</button>
+                    <button 
+                      className={`w-[150] py-1 rounded-full bg-[#812C27] text-xl ${bullriderFont.className}`}>{isBuying ? "Quick Buy" : "Quick Sell"}</button>
                   </div>
             </div>
 

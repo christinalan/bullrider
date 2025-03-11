@@ -15,18 +15,18 @@ export default function Home() {
     <div className="relative min-h-screen w-full pt-8 pb-10 sm:p-20 ">
       <main className="flex flex-col row-start-2 items-center sm:items-start z-10">
         {/* Bull rider text */}
-        <div className="flex w-full justify-center items-center pt-4">
-          <h1 className={`${bullriderFont.className} text-[80px] text-[#251F14] text-center`}>Bull Rider</h1>
+        <div className="flex w-full justify-center items-center sm:pt-4 pt-12">
+          <h1 className={`${bullriderFont.className} text-[65px] sm:text-[80px] text-[#251F14] text-center`}>Bull Rider</h1>
         </div>
             {/* Stars and Text */}
-        <div className="flex w-full justify-center items-center gap-4 mt-[-24px]">
+        <div className="flex w-full justify-center items-center gap-4 mt-[-20px] sm:mt-[-24px]">
           <Image 
               src={star}
               alt="star"
               width={20}
               priority
             />
-            <div className={`${bullriderFont.className} flex flex-col items-center text-[#251F14] text-[20px] text-center leading-[1.1]`}>
+            <div className={`${bullriderFont.className} flex flex-col items-center text-[#251F14] text-[18px] sm:text-[20px] text-center leading-[1.1]`}>
                  <p>Sell early, die poor. Hold long,</p>
                  <p>{`ride rich. Don't fall off the bull.`}</p>
             </div>
@@ -45,8 +45,7 @@ export default function Home() {
          {/* another video */}
          <div className="flex w-full justify-center">
             <video
-                className="-z-10"
-                width="470" 
+                className="-z-10 w-[350px] sm:w-[470px]"
                 height="360" 
                 src="/bull_video.mp4"
                 autoPlay
@@ -91,72 +90,74 @@ export default function Home() {
             />
           </div>
               {/* text block */}
-            <div className="flex flex-col gap-2 justify-center items-start mx-auto mt-2 text-[14.5px] text-[#251F14] w-[70%] max-w-[330px] h-[220px] leading-[1.1]">
-                <div className="flex gap-4 items-center">
-                  <Image 
-                      src={star}
-                      alt="star"
-                      width={14}
-                      height={14}
-                      priority
-                    />
-                  <p>When you buy in, 50% of your money is withheld for long riders</p>
-                </div>
+            <div className="flex flex-col gap-2 justify-center items-start mx-auto mt-1 sm:mt-0 text-[14px] sm:text-[14.5px] text-[#251F14] w-[72%] sm:w-[70%] max-w-[330px] h-[220px] sm:h-[200px] leading-[1.1]">
+              <div className="pt-0">
+                  <div className="flex gap-4 items-center">
+                    <Image 
+                        src={star}
+                        alt="star"
+                        width={14}
+                        height={14}
+                        priority
+                      />
+                    <p>When you buy in, 50% of your money is withheld for long riders</p>
+                  </div>
 
-                <div className="flex gap-4 items-center">
-                  <Image 
-                      src={star}
-                      alt="star"
-                      width={14}
-                      height={14}
-                      priority
-                    />
-                  <p>Your withheld funds vest linearly over 7 days.</p>
-                </div>
+                  <div className="flex gap-4 items-center">
+                    <Image 
+                        src={star}
+                        alt="star"
+                        width={14}
+                        height={14}
+                        priority
+                      />
+                    <p>Your withheld funds vest linearly over 7 days.</p>
+                  </div>
 
-                <div className="flex gap-4 items-center">
-                  <Image 
-                      src={star}
-                      alt="star"
-                      width={14}
-                      height={14}
-                      priority
-                    />
-                  <p>If you sell before fully vesting, your unvested shares are forfeited and redistributed
-                    proportionally to long riders.
-                  </p>
-                </div>
+                  <div className="flex gap-4 items-center">
+                    <Image 
+                        src={star}
+                        alt="star"
+                        width={14}
+                        height={14}
+                        priority
+                      />
+                    <p>If you sell before fully vesting, your unvested shares are forfeited and redistributed
+                      proportionally to long riders.
+                    </p>
+                  </div>
 
-                <div className="flex gap-4 items-center">
-                  <Image 
-                      src={star}
-                      alt="star"
-                      width={14}
-                      height={14}
-                      priority
-                    />
-                  <p>Those who have fully vested can reclaim their withheld funds along with a
-                    proportional share or forfeited funds from early sellers.
-                  </p>
-                </div>
+                  <div className="flex gap-4 items-center">
+                    <Image 
+                        src={star}
+                        alt="star"
+                        width={14}
+                        height={14}
+                        priority
+                      />
+                    <p>Those who have fully vested can reclaim their withheld funds along with a
+                      proportional share or forfeited funds from early sellers.
+                    </p>
+                  </div>
 
-                <div className="flex gap-4 items-center">
-                  <Image 
-                      src={star}
-                      alt="star"
-                      width={14}
-                      height={14}
-                      priority
-                    />
-                  <p>After fully vesting, your share of the long rider pool increases by 1% every day.
-                  </p>
+                  <div className="flex gap-4 items-center">
+                    <Image 
+                        src={star}
+                        alt="star"
+                        width={14}
+                        height={14}
+                        priority
+                      />
+                    <p>After fully vesting, your share of the long rider pool increases by 1% every day.
+                    </p>
+                  </div>
                 </div>
             </div>
 
             {/* connect wallet button */}
-            <div className="flex w-full justify-center items-center pt-6">
+            <div className="flex w-full justify-center items-center pt-4 sm:pt-6">
             <Link href="/vesting">
-                <button className={`${bullriderFont.className} text-[50px] text-[#812C27] text-center rotate-[-9deg] px-6 py-[4px] outline outline-[3.6px] outline-[#812C27] leading-none cursor-pointer transition-transform duration-200 hover:scale-105 active:scale-95`}>
+                <button className={`${bullriderFont.className} text-[38px] sm:text-[50px] text-[#812C27] text-center rotate-[-7deg] sm:rotate-[-9deg] mt-[-6px] sm:mt-[0px] px-6 py-[2px] sm:py-[4px] outline outline-[3.6px] outline-[#812C27] leading-none cursor-pointer transition-transform duration-200 hover:scale-105 active:scale-95`}>
                   Connect Wallet
                 </button>
             </Link>
