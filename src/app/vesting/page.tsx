@@ -123,7 +123,7 @@ export default function Vesting() {
                   {/* Row 4: Quick Buy Button */}
                   <div className="flex justify-center">
                     <button 
-                      className={`w-[150] py-1 rounded-full bg-[#812C27] text-xl ${bullriderFont.className}`}>{isBuying ? "Quick Buy" : "Quick Sell"}</button>
+                      className={`w-[200] py-1 rounded-full bg-[#812C27] text-xl ${bullriderFont.className}`}>{isBuying ? "Quick Buy" : "Quick Sell"}</button>
                   </div>
             </div>
 
