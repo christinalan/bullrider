@@ -58,7 +58,7 @@ export default function RootLayout({
                   priority
                 />
             </div>
-            <div className="absolute bottom-2 -mb-2 left-0 w-full h-[calc(65%-4rem)] flex justify-center items-center opacity-90 blur-lg">
+            <div className="absolute bottom-2 -mb-2 left-0 w-full h-[calc(65%-4rem)] flex justify-center items-center opacity-100 blur-lg">
                 <Image 
                   className="-z-1 w-[350px] sm:w-[430px]"
                   src={tan_sq}

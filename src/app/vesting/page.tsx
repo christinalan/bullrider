@@ -35,7 +35,7 @@ export default function Vesting() {
                   className="-z-1"
                   src={tan_sq}
                   alt="tan background"
-                  width={450}
+                  width={475}
                   priority
                 />
           </div>
