@@ -30,18 +30,18 @@ export default function Vesting() {
                 />
           </div> */}
 
-          <div className="absolute top-[-140] left-0 w-full h-full flex justify-center items-center blur-lg">
+          <div className="fixed top-[-150] left-0 w-full h-full flex justify-center items-center blur-lg">
                 <Image 
                   className="-z-1"
                   src={tan_sq}
                   alt="tan background"
-                  width={475}
+                  width={465}
                   priority
                 />
           </div>
           
           {/* block with Vesting-specific content, scrollable wrapper */}
-          <div className="w-full max-w-[380px] h-[85vh] overflow-y-auto flex flex-col items-center px-4 pb-4 scrollbar-hide z-20">
+          <div className="w-full max-w-[380px] h-[82vh] overflow-y-auto flex flex-col items-center px-4 pb-4 scrollbar-hide z-20">
                {/* Header info */}
               <div className="flex w-full justify-center items-center pt-4">
                 <h1 className={`${bullriderFont.className} text-[80px] text-[#251F14] text-center`}>Bull Rider</h1>
