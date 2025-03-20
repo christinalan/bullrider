@@ -30,7 +30,7 @@ export default function Vesting() {
                 />
           </div> */}
 
-          <div className="fixed top-[-150] left-0 w-full h-full flex justify-center items-center blur-lg">
+          <div className="fixed top-[-200] left-0 w-full h-full flex justify-center items-center blur-lg">
                 <Image 
                   className="-z-1"
                   src={tan_sq}
