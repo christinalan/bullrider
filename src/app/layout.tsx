@@ -1,6 +1,7 @@
 import Image from "next/image"
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+// import localFont from "next/font/local";
+import { EB_Garamond } from 'next/font/google'
 import "./globals.css";
 import background from "../images/background.png"
 import sign_bg from "../images/sign_bg.png"
@@ -12,11 +13,16 @@ import tan_sq from "../images/tan_sq.png"
 //   subsets: ["latin"],
 // });
 
+const ebGaramond = EB_Garamond({
+  subsets: ['latin'],
+  display: 'swap',
 
-const regFont = localFont({
-  src: "../fonts/EBGaramond12-AllSC.ttf",
-  display: "swap"
 })
+
+// const regFont = localFont({
+//   src: "../fonts/EBGaramond12-AllSC.ttf",
+//   display: "swap"
+// })
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -31,7 +37,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`antialiased relative min-h-screen w-full ${regFont.className}`}
+        className={`antialiased relative min-h-screen w-full ${ebGaramond.className}`}
       >
         <div className="">
           <div className="absolute top-0 left-0 w-full h-full min-h-screen">

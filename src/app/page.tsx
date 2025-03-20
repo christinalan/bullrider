@@ -54,15 +54,7 @@ export default function Home() {
                 playsInline
               />
         </div>
-         {/* <div className="fixed top-40 left-0 w-full h-full flex justify-center items-center opacity-90 blur-lg">
-                <Image 
-                  className="-z-1"
-                  src={tan_sq}
-                  alt="tan background"
-                  width={430}
-                  priority
-                />
-          </div> */}
+
            {/* 2nd pair of Vector Lines */}
         <div className="flex flex-col w-full justify-center gap-1 z-10">
           <div className="mx-auto">
@@ -91,8 +83,8 @@ export default function Home() {
           </div>
               {/* text block */}
             <div className="flex flex-col gap-2 justify-center items-start mx-auto mt-1 sm:mt-0 text-[14px] sm:text-[14.5px] text-[#251F14] w-[72%] sm:w-[70%] max-w-[330px] h-[220px] sm:h-[200px] leading-[1.1]">
-              <div className="pt-0">
-                  <div className="flex gap-4 items-center">
+              <div className="flex flex-col pt-0 gap-3">
+                  <div className="flex gap-4 items-start">
                     <Image 
                         src={star}
                         alt="star"
@@ -122,8 +114,7 @@ export default function Home() {
                         height={14}
                         priority
                       />
-                    <p>If you sell before fully vesting, your unvested shares are forfeited and redistributed
-                      proportionally to long riders.
+                    <p>If you sell before fully vesting, your unvested shares are forfeited and redistributed to Long Riders.
                     </p>
                   </div>
 
@@ -135,8 +126,7 @@ export default function Home() {
                         height={14}
                         priority
                       />
-                    <p>Those who have fully vested can reclaim their withheld funds along with a
-                      proportional share or forfeited funds from early sellers.
+                    <p>Once fully vested, your share of the Long Rider Pool increases by 7% every day.
                     </p>
                   </div>
 
@@ -148,7 +138,7 @@ export default function Home() {
                         height={14}
                         priority
                       />
-                    <p>After fully vesting, your share of the long rider pool increases by 1% every day.
+                    <p>The longer you hold, the bigger your stake grows—compounding your claim over time.
                     </p>
                   </div>
                 </div>
@@ -169,3 +159,14 @@ export default function Home() {
 }
 
 
+
+
+       {/* <div className="fixed top-40 left-0 w-full h-full flex justify-center items-center opacity-90 blur-lg">
+                <Image 
+                  className="-z-1"
+                  src={tan_sq}
+                  alt="tan background"
+                  width={430}
+                  priority
+                />
+          </div> */}

@@ -35,22 +35,35 @@ type LinePlotProps = {
       const svg = d3.select(svgRef.current);
       svg.selectAll("*").remove();
   
-      // Add background grid
-      const xAxis = d3.axisBottom(x).ticks(data.length);
-      const yAxis = d3.axisLeft(y).ticks(5);
-      
-      svg.append("g")
+      // Add X Axis with Grid Lines
+      const xAxis = d3.axisBottom(x)
+        .ticks(data.length)
+        // .tickSize(-height + marginTop + marginBottom) // Extends grid lines across chart
+        // .tickPadding(10); // Spaces labels away from axis
+
+      const xAxisGroup = svg.append("g")
         .attr("transform", `translate(0,${height - marginBottom})`)
-        .call(xAxis)
-        .selectAll("line")
-        .attr("stroke", "#812C27");
-      
-      svg.append("g")
+        .call(xAxis);
+
+      xAxisGroup.selectAll("text").attr("fill", "#812C27"); // X-axis labels
+      xAxisGroup.selectAll(".tick line").attr("stroke", "#812C27"); // X-axis grid lines
+      xAxisGroup.select(".domain").attr("stroke", "#812C27"); // X-axis main line
+
+      // Add Y Axis with Grid Lines
+      const yAxis = d3.axisLeft(y)
+        .ticks(5)
+        // .tickSize(-width + marginLeft + marginRight) // Extends grid lines across chart
+        // .tickPadding(10);
+
+      const yAxisGroup = svg.append("g")
         .attr("transform", `translate(${marginLeft},0)`)
-        .call(yAxis)
-        .selectAll("line")
-        .attr("stroke", "#812C27");
+        .call(yAxis);
+
+      yAxisGroup.selectAll("text").attr("fill", "#812C27"); // Y-axis labels
+      yAxisGroup.selectAll(".tick line").attr("stroke", "#812C27"); // Y-axis grid lines
+      yAxisGroup.select(".domain").attr("stroke", "#812C27"); // Y-axis main line
       
+      // Add line path
       svg.append("path")
         .datum(data)
         .attr("fill", "none")
@@ -58,6 +71,7 @@ type LinePlotProps = {
         .attr("stroke-width", 1.5)
         .attr("d", line);
   
+      // Add data points
       svg.selectAll("circle")
         .data(data)
         .enter()
