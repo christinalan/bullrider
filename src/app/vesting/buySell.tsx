@@ -9,7 +9,11 @@ const bullriderFont = localFont({
 
 export default function BuySell() {
     const [isBuying, setIsBuying] = useState(true);
+    const [selectedPercent, setSelectedPercent] = useState<string | null>(null);
 
+    const handleToggle = (percent:string) => {
+      setSelectedPercent(prev => (prev === percent ? null : percent));
+    }
     
     return (
         <div className="w-[334px] h-[210px] rounded-lg border-2 border-[#812C27] flex flex-col gap-4">
@@ -28,14 +32,23 @@ export default function BuySell() {
         </div>
           <div className="w-[330px] h-[2px] bg-[#812C27]"></div>
         </div>
-        {/* Row 2: Percentage Selection */}
-        <div className="flex mx-auto gap-4">
-          {["25%", "50%", "100%"].map((percent) => (
-            <div key={percent} className="px-4 flex items-start justify-center border-lg border-[#812C27] text-[#812C27] drop-shadow-[0.5px_0.5px_0px_#812C27] rounded-full border-2 border-current pb-1">
+
+       {/* Percentage Buttons */}
+      <div className="flex gap-4 items-start justify-center ">
+        {["25%", "50%", "100%"].map((percent) => {
+          const isActive = selectedPercent === percent;
+          return (
+            <button
+              key={percent}
+              onClick={() => handleToggle(percent)}
+              className={`px-4 pb-1 rounded-full border-2 border-[#812C27] text-md drop-shadow-[0.5px_0.5px_0px_#812C27] 
+                ${isActive ? "bg-[#812C27] text-white" : "bg-transparent text-[#812C27]"}`}
+            >
               {percent}
-            </div>
-          ))}
-        </div>
+            </button>
+          );
+        })}
+      </div>
 
         {/* Row 3: ETH Amount Input */}
         <div className="flex justify-start items-center border-2 border-[#812C27] rounded-full items-center mx-auto px-4 gap-2 text-[#812C27] drop-shadow-[0.7px_0.7px_0px_#812C27] ">

@@ -6,7 +6,7 @@ export default function VestedSlider() {
     const daysVested = 32
   
     return (
-      <div className="w-full flex flex-col gap-2 text-center items-center">
+      <div className="w-full flex flex-col gap-3 text-center items-center">
         {/* Text Display */}
         <h1 className="text-[#812C27] text-2xl font-bold">
           ${vestedAmount} VESTED ({vestedPercentage}%)

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import localFont from "next/font/local";
 import star from "../../images/star.png"
-import tan_sq from "../../images/tan_sq.png"
+// import tan_sq from "../../images/tan_sq.png"
 // import long_tan from "../../images/long_tan.png"
 import LinePlot from "./graph"
 import VestedSlider from "./vestedDisplay"
@@ -30,7 +30,7 @@ export default function Vesting() {
                 />
           </div> */}
 
-          <div className="fixed top-[-200] left-0 w-full h-full flex justify-center items-center blur-lg">
+          {/* <div className="fixed top-[-200] left-0 w-full h-full flex justify-center items-center blur-lg">
                 <Image 
                   className="-z-1"
                   src={tan_sq}
@@ -38,10 +38,10 @@ export default function Vesting() {
                   width={465}
                   priority
                 />
-          </div>
+          </div> */}
           
           {/* block with Vesting-specific content, scrollable wrapper */}
-          <div className="w-full max-w-[380px] h-[82vh] overflow-y-auto flex flex-col items-center px-4 pb-4 scrollbar-hide z-20">
+          <div className="w-full max-w-[450px] h-[82vh] overflow-y-auto flex flex-col items-center px-4 pb-4 scrollbar-hide z-20">
                {/* Header info */}
               <div className="flex w-full justify-center items-center pt-4">
                 <h1 className={`${bullriderFont.className} text-[80px] text-[#251F14] text-center`}>Bull Rider</h1>
@@ -88,7 +88,10 @@ export default function Vesting() {
                   {/* next block with vested info */}
                   <div className="w-[330px]">
                   <VestedSlider />
+                  
+                  <div className="mt-4">
                   <Board />
+                  </div>
                   </div>
 
             </div>
