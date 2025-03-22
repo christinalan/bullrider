@@ -8,7 +8,7 @@ export default function VestedSlider() {
     return (
       <div className="w-full flex flex-col gap-3 text-center items-center">
         {/* Text Display */}
-        <h1 className="text-[#812C27] text-2xl font-bold">
+        <h1 className="text-[#812C27] text-2xl sm:text-3xl font-black">
           ${vestedAmount} VESTED ({vestedPercentage}%)
         </h1>
   
@@ -21,7 +21,7 @@ export default function VestedSlider() {
         </div>
 
         {/* Text about the holder */}
-        <h1 className="text-[#812C27] text-lg font-bold leading-6"
+        <h1 className="text-[#812C27] text-lg font-black leading-6"
         >{`You've held for ${daysVested} and are the ${vestedRank}th longest holder.`}</h1>
       </div>
     );

@@ -5,8 +5,6 @@ import { EB_Garamond } from 'next/font/google'
 import "../globals.css";
 import background from "../../images/background.png"
 import long_sign from "../../images/poster_long.png"
-import og_long_tan from "../../images/og_long_tan.png"
-
 
 const ebGaramond = EB_Garamond({
   subsets: ['latin'],
@@ -44,17 +42,17 @@ export default function RootLayout({
                 objectFit="cover"
                 priority
               />
-            <div className="absolute top-0 left-0 w-full h-full flex justify-center items-center">
+         <div className="absolute top-10 sm:top-0 left-0 w-[430px] h-[825px] sm:w-full sm:h-full flex justify-center items-center">
                 <Image 
-                  className="z-2"
+                  className="z-2 object-fill sm:object-contain"
                   src={long_sign}
+                  fill
                   alt="sign background"
-                  width={500}
                   priority
                 />
             </div>
 
-            <div className="absolute top-0 left-0 w-full h-full flex justify-center items-center blur-md">
+            {/* <div className="absolute top-0 left-0 w-full h-full flex justify-center items-center blur-md">
                 <Image 
                   className="-z-1 w-[550px] h-[900px]"
                   src={og_long_tan}
@@ -62,7 +60,7 @@ export default function RootLayout({
                   width={500}
                   priority
                 />
-            </div>
+            </div> */}
           </div>
         </div>
         <div className="z-10">{children}</div>

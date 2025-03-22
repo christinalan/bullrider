@@ -18,7 +18,7 @@ export default function Board() {
       ];
 
     return (
-        <div className="w-[334px] rounded-lg border-2 border-[#812C27] flex flex-col">
+        <div className="w-[334px] sm:w-[380px] rounded-lg border-2 border-[#812C27] flex flex-col">
             {/* Leadership board top */}
             <div className="flex flex-col">
             <div className={`${bullriderFont.className} flex text-center text-2xl bg-[#812C27] text-[#D7BA94]`}>
@@ -31,7 +31,7 @@ export default function Board() {
                {/* Leaderboard Rows */}
             <div className="flex flex-col justify-center py-2 gap-1">
                 {leaderboardData.map((entry, index) => (
-                <div key={index} className="flex text-[#812C27] text-md text-center pb-1 border-b border-[#812C27] last:border-b-0">
+                <div key={index} className="flex text-[#812C27] text-md sm:text-lg font-black text-center pb-1 border-b border-[#812C27] last:border-b-0">
                     <p className="w-1/6 text-left font-bold pl-4">{index + 1}</p> {/* Rank Number */}
                     <p className="w-1/3 text-left pl-2">{entry.name}</p>
                     <p className="w-1/3 text-right pr-4">{entry.daysHeld}</p>

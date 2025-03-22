@@ -12,14 +12,14 @@ const bullriderFont = localFont({
 
 export default function Home() {
   return (
-    <div className="relative min-h-screen w-full pt-8 pb-10 sm:p-20 ">
-      <main className="flex flex-col row-start-2 items-center sm:items-start z-10">
+    <div className="relative min-h-screen w-full">
+      <main className="flex flex-col items-center justify-center w-full min-h-screen z-10">
         {/* Bull rider text */}
-        <div className="flex w-full justify-center items-center sm:pt-4 pt-12">
+        <div className="flex w-full justify-center items-center mt-[-40] sm:mt-[-20]">
           <h1 className={`${bullriderFont.className} text-[65px] sm:text-[80px] text-[#251F14] text-center`}>Bull Rider</h1>
         </div>
             {/* Stars and Text */}
-        <div className="flex w-full justify-center items-center gap-4 mt-[-20px] sm:mt-[-24px]">
+        <div className="flex w-full justify-center items-center gap-4 mt-[-16px] sm:mt-[-18px]">
           <Image 
               src={star}
               alt="star"
@@ -39,8 +39,8 @@ export default function Home() {
         </div>
          {/* Vector Line */}
          <div className="mx-auto">
-            <div className="w-[345px] h-[4px] bg-[#251F14] mt-1"></div>
-            <div className="w-[345px] h-[2px] bg-[#251F14] mt-0.5"></div>
+            <div className="w-[345px] sm:w-[420px] h-[4px] bg-[#251F14] mt-1"></div>
+            <div className="w-[345px] sm:w-[420px] h-[2px] bg-[#251F14] mt-0.5"></div>
          </div>
          {/* another video */}
          <div className="flex w-full justify-center">
@@ -58,11 +58,11 @@ export default function Home() {
            {/* 2nd pair of Vector Lines */}
         <div className="flex flex-col w-full justify-center gap-1 z-10">
           <div className="mx-auto">
-              <div className="w-[345px] h-[4px] bg-[#251F14] mt-1"></div>
-              <div className="w-[345px] h-[2px] bg-[#251F14] mt-0.5"></div>
+              <div className="w-[345px] sm:w-[420px] h-[4px] bg-[#251F14] mt-1"></div>
+              <div className="w-[345px] sm:w-[420px] h-[2px] bg-[#251F14] mt-0.5"></div>
           </div>
                 {/* How it Works block */}
-          <div className="flex w-full justify-center items-center gap-4">
+          <div className="flex w-full justify-center items-center sm:mt-2 gap-4">
             <Image 
                 src={hand}
                 alt="hand"
@@ -82,7 +82,7 @@ export default function Home() {
             />
           </div>
               {/* text block */}
-            <div className="flex flex-col gap-2 justify-center items-start mx-auto mt-1 sm:mt-0 text-[14px] sm:text-[14.5px] text-[#251F14] w-[72%] sm:w-[70%] max-w-[330px] h-[220px] sm:h-[200px] leading-[1.1]">
+            <div className="flex flex-col justify-center items-start mx-auto sm:mt-2 text-[14px] sm:text-[14.5px] text-[#251F14] font-black w-[80%] sm:w-[80%] max-w-[400px] h-[220px] sm:h-[200px] leading-[1.1]">
               <div className="flex flex-col pt-0 gap-3">
                   <div className="flex gap-4 items-start">
                     <Image 
@@ -147,7 +147,7 @@ export default function Home() {
             {/* connect wallet button */}
             <div className="flex w-full justify-center items-center pt-4 sm:pt-6">
             <Link href="/vesting">
-                <button className={`${bullriderFont.className} text-[38px] sm:text-[50px] text-[#812C27] text-center rotate-[-7deg] sm:rotate-[-9deg] mt-[-6px] sm:mt-[0px] px-6 py-[2px] sm:py-[4px] outline outline-[3.6px] outline-[#812C27] leading-none cursor-pointer transition-transform duration-200 hover:scale-105 active:scale-95`}>
+                <button className={`${bullriderFont.className} text-[38px] sm:text-[50px] text-[#812C27] text-center rotate-[-7deg] sm:rotate-[-9deg] mt-[-4px] sm:mt-[8px] px-6 py-[2px] sm:py-[4px] outline outline-[3.6px] outline-[#812C27] leading-none cursor-pointer transition-transform duration-200 hover:scale-105 active:scale-95`}>
                   Connect Wallet
                 </button>
             </Link>

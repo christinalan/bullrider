@@ -39,7 +39,7 @@ export default function RootLayout({
       <body
         className={`antialiased relative min-h-screen w-full ${ebGaramond.className}`}
       >
-        <div className="">
+        <div className="pointer-events-none">
           <div className="absolute top-0 left-0 w-full h-full min-h-screen">
             <Image 
                 className="-z-10"
@@ -49,16 +49,15 @@ export default function RootLayout({
                 objectFit="cover"
                 priority
               />
-            <div className="absolute top-0 left-0 w-full h-full flex justify-center items-center">
+            <div className="absolute top-10 sm:top-0 left-0 w-[430px] h-[825px] sm:w-full sm:h-full flex justify-center items-center">
                 <Image 
-                  className="z-2"
+                  className="z-2 object-fill sm:object-contain"
                   src={sign_bg}
                   alt="sign background"
-                  width={500}
                   priority
                 />
             </div>
-            <div className="absolute bottom-2 -mb-2 left-0 w-full h-[calc(65%-4rem)] flex justify-center items-center opacity-100 blur-lg">
+            <div className="absolute bottom-2 -mb-2 left-0 w-full h-[calc(67%-4rem)] flex justify-center items-center opacity-100 blur-lg">
                 <Image 
                   className="-z-1 w-[350px] sm:w-[430px]"
                   src={tan_sq}
@@ -68,10 +67,9 @@ export default function RootLayout({
           </div>
             <div className="absolute top-0 left-0 w-full h-full flex justify-center items-center">
                 <Image 
-                  className="-z-10"
+                  className="-z-10 sm:object-contain"
                   src={og_long_tan}
                   alt="tan background"
-                  width={450}
                   priority
                 />
             </div>
