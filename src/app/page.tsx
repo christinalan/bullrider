@@ -15,7 +15,7 @@ export default function Home() {
     <div className="relative min-h-screen w-full">
       <main className="flex flex-col items-center justify-center w-full min-h-screen z-10">
         {/* Bull rider text */}
-        <div className="flex w-full justify-center items-center mt-[-20px] sm:mt-[-20px]">
+        <div className="flex w-full justify-center items-center mt-[-8px] sm:mt-[-20px]">
           <h1 className={`${bullriderFont.className} text-[65px] sm:text-[80px] text-[#251F14] text-center`}>Bull Rider</h1>
         </div>
             {/* Stars and Text */}
@@ -147,7 +147,7 @@ export default function Home() {
             {/* connect wallet button */}
             <div className="flex w-full justify-center items-center pt-4 sm:pt-6">
             <Link href="/vesting">
-                <button className={`${bullriderFont.className} text-[38px] sm:text-[50px] text-[#812C27] text-center rotate-[-7deg] sm:rotate-[-9deg] mt-[-10px] sm:mt-[8px] px-6 py-[2px] sm:py-[4px] outline outline-[3.6px] outline-[#812C27] leading-none cursor-pointer transition-transform duration-200 hover:scale-105 active:scale-95`}>
+                <button className={`${bullriderFont.className} text-[38px] sm:text-[50px] text-[#812C27] text-center rotate-[-7deg] sm:rotate-[-9deg] mt-[-8px] sm:mt-[8px] px-6 py-[2px] sm:py-[4px] outline outline-[3.6px] outline-[#812C27] leading-none cursor-pointer transition-transform duration-200 hover:scale-105 active:scale-95`}>
                   Connect Wallet
                 </button>
             </Link>
