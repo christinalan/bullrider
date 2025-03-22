@@ -18,7 +18,7 @@ export default function BackgroundLayer () {
               objectFit="cover"
               priority
             />
-       <div className="absolute top-10 sm:top-0 left-0 w-[430px] h-[825px] sm:w-full sm:h-full flex justify-center items-center">
+       <div className="absolute top-10 sm:top-0 left-0 xs:w-[105vw] w-[100vw] h-[92vh] sm:w-full sm:h-full flex justify-center items-center">
               <Image 
                 className="z-2 object-fill sm:object-contain"
                 src={long_sign}

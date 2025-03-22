@@ -43,17 +43,16 @@ export default function Home() {
             <div className="w-[345px] sm:w-[420px] h-[2px] bg-[#251F14] mt-0.5"></div>
          </div>
          {/* another video */}
-         <div className="flex w-full justify-center">
+         <div className="relative w-[90vw] max-w-[470px] mx-auto overflow-hidden shadow-xl isolate">
             <video
-                className="w-[350px] xs:w-[300px] sm:w-[470px]"
-                height="360" 
-                src="/bull_video.mp4"
-                autoPlay
-                loop
-                muted
-                playsInline
-              />
-        </div>
+              className="w-full h-auto [mask-image:radial-gradient(circle,white_60%,transparent_100%)]"
+              src="/bull_video.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
+            />
+          </div>
 
            {/* 2nd pair of Vector Lines */}
         <div className="flex flex-col w-full justify-center gap-1 z-10">
