@@ -1,3 +1,4 @@
+'use client'
 import Link from "next/link"
 import Image from "next/image";
 import localFont from "next/font/local";
@@ -24,10 +25,14 @@ export default function Vesting() {
           <div className="w-full max-w-[450px] sm:max-w-[600px] h-[82vh] sm:h-[88vh] overflow-y-auto flex flex-col items-center pb-4 scrollbar-hide z-20">
                {/* Header info */}
 
-              <Link href="/" className="flex w-full justify-center items-center sm:mt-[-12px] no-underline">
-                <h1 className={`${bullriderFont.className}  text-[65px] sm:text-[80px] text-[#251F14]`}>Bull Rider</h1>
-              </Link>
-
+          <Link href="/" onClick={(e) => {
+                e.preventDefault();
+                window.location.href = "/";
+              }} className="flex w-full justify-center items-center sm:mt-[-12px]">
+                <h1 className={`${bullriderFont.className} text-[65px] sm:text-[80px] text-[#251F14]`}>
+                  Bull Rider
+                </h1>
+          </Link>
 
             {/* Stars and Text */}
             <div className="flex w-full justify-center items-center gap-4 mt-[-20px]">
