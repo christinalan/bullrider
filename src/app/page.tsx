@@ -16,7 +16,7 @@ export default function Home() {
       <main className="flex flex-col items-center justify-center w-full min-h-screen z-10">
         {/* Bull rider text */}
         <div className="flex w-full justify-center items-center mt-[-8px] sm:mt-[-20px]">
-          <h1 className={`${bullriderFont.className} text-[65px] sm:text-[80px] text-[#251F14] text-center`}>Bull Rider</h1>
+          <h1 className={`${bullriderFont.className} text-[60px] sm:text-[80px] text-[#251F14] text-center`}>Bull Rider</h1>
         </div>
             {/* Stars and Text */}
         <div className="flex w-full justify-center items-center gap-4 mt-[-16px] sm:mt-[-18px]">
@@ -45,7 +45,7 @@ export default function Home() {
          {/* another video */}
          <div className="flex w-full justify-center">
             <video
-                className="-z-10 w-[350px] sm:w-[470px]"
+                className="w-[350px] xs:w-[300px] sm:w-[470px]"
                 height="360" 
                 src="/bull_video.mp4"
                 autoPlay
