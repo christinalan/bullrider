@@ -1,9 +1,9 @@
+// import Image from "next/image"
 import type { Metadata } from "next";
-// import localFont from "next/font/local";
-import { EB_Garamond } from "next/font/google";
+import { EB_Garamond } from 'next/font/google'
 import "./globals.css";
-import { ClientWalletProvider } from "@/app/ClientWalletProvider";
-import BackgroundLayer from "./backgroundLayer";
+import BackgroundLayer from "./backgroundLayer"
+import { ClientWalletProvider } from "./ClientWalletProvider";
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
@@ -11,9 +11,9 @@ import BackgroundLayer from "./backgroundLayer";
 // });
 
 const ebGaramond = EB_Garamond({
-  subsets: ["latin"],
-  display: "swap",
-});
+  subsets: ['latin'],
+  display: 'swap'
+})
 
 // const regFont = localFont({
 //   src: "../fonts/EBGaramond12-AllSC.ttf",
@@ -32,14 +32,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`antialiased relative min-h-screen w-full ${ebGaramond.className}`}>
-        <ClientWalletProvider>
-          <BackgroundLayer />
-          <main className="z-10">{children}</main>
-        </ClientWalletProvider>
+      <body
+        className={`antialiased relative min-h-screen w-full ${ebGaramond.className}`}
+      >
+       <BackgroundLayer />
+       <ClientWalletProvider>
+        <main className="z-10">{children}</main>
+       </ClientWalletProvider>
       </body>
     </html>
   );
 }
 
-// ${geistSans.variable} ${geistMono.variable}
+
+// ${geistSans.variable} ${geistMono.variable} 
