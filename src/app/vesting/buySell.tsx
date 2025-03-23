@@ -29,6 +29,8 @@ export default function BuySell() {
   useEffect(() => {
     const fetchBalance = async () => {
       try {
+        console.log("publicKey", publicKey);
+        console.log("connection", connection);
         if (!publicKey || !connection) return;
         const tokenAccountAddress = await getAssociatedTokenAddress(
           BULL_TOKEN_ADDRESS,
@@ -43,6 +45,7 @@ export default function BuySell() {
         const tokenBalance = rawAmount / Math.pow(10, decimals);
 
         setBalance(tokenBalance);
+        console.log("tokenBalance", tokenBalance);
       } catch (error) {
         console.error('Error fetching token balance:', error);
       }
