@@ -37,8 +37,8 @@ export default function Home() {
   };
 
   return (
-    <div className="relative min-h-screen w-full pt-8 pb-10 sm:p-20 ">
-      <main className="flex flex-col row-start-2 items-center sm:items-start z-10">
+    <div className="relative min-h-screen w-full">
+      <main className="flex flex-col items-center justify-center w-full min-h-screen z-10">
         {/* Bull rider text */}
         <div className="flex w-full justify-center items-center sm:pt-4 pt-12">
           <h1 className={`${bullriderFont.className} text-[65px] sm:text-[80px] text-[#251F14] text-center`}>

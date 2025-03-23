@@ -1,3 +1,5 @@
+'use client'
+import Link from "next/link"
 import Image from "next/image";
 import localFont from "next/font/local";
 import star from "../../images/star.png"
@@ -16,39 +18,24 @@ const bullriderFont = localFont({
 export default function Vesting() {
 
   return (
-    <div className="relative min-h-screen w-full pt-8 pb-10 sm:p-20 ">
-      <main className="flex flex-col row-start-2 items-center sm:items-center z-10 w-full">
-
-              {/* background images to cover the hole */}
-          {/* <div className="fixed top-15 left-10 w-full h-full flex justify-center items-center blur-lg">
-                <Image 
-                  className="-z-1"
-                  src={long_tan}
-                  alt="tan background"
-                  width={500}
-                  priority
-                />
-          </div> */}
-
-          {/* <div className="fixed top-[-200] left-0 w-full h-full flex justify-center items-center blur-lg">
-                <Image 
-                  className="-z-1"
-                  src={tan_sq}
-                  alt="tan background"
-                  width={465}
-                  priority
-                />
-          </div> */}
+    <div className="relative min-h-screen w-full">
+      <main className="flex flex-col w-full min-h-screen justify-center items-center z-10 w-full">
           
           {/* block with Vesting-specific content, scrollable wrapper */}
-          <div className="w-full max-w-[450px] h-[82vh] overflow-y-auto flex flex-col items-center px-4 pb-4 scrollbar-hide z-20">
+          <div className="w-full max-w-[450px] sm:max-w-[600px] h-[82vh] sm:h-[88vh] overflow-y-auto flex flex-col items-center pb-4 scrollbar-hide z-20">
                {/* Header info */}
-              <div className="flex w-full justify-center items-center pt-4">
-                <h1 className={`${bullriderFont.className} text-[80px] text-[#251F14] text-center`}>Bull Rider</h1>
-              </div>
+
+          <Link href="/" onClick={(e) => {
+                e.preventDefault();
+                window.location.href = "/";
+              }} className="flex w-full justify-center items-center sm:mt-[-12px]">
+                <h1 className={`${bullriderFont.className} text-[65px] sm:text-[80px] text-[#251F14]`}>
+                  Bull Rider
+                </h1>
+          </Link>
 
             {/* Stars and Text */}
-            <div className="flex w-full justify-center items-center gap-4 mt-[-24px]">
+            <div className="flex w-full justify-center items-center gap-4 mt-[-20px]">
               <Image 
                   src={star}
                   alt="star"
@@ -69,24 +56,24 @@ export default function Vesting() {
             <div className="flex flex-col w-full justify-center gap-1 z-10">
             {/* Vector Line */}
             <div className="mx-auto">
-                <div className="w-[345px] h-[4px] bg-[#251F14] mt-1"></div>
-                <div className="w-[345px] h-[2px] bg-[#251F14] mt-0.5"></div>
+                <div className="w-[345px] sm:w-[420px] h-[4px] bg-[#251F14] mt-1"></div>
+                <div className="w-[345px] sm:w-[420px] h-[2px] bg-[#251F14] mt-0.5"></div>
             </div>
 
             {/* graph block */}
             <div className="flex flex-col w-full justify-center items-center gap-4">
             
-                <div className={`flex flex-col items-center text-[#812C27] text-[22px] text-center font-black pt-2`}>
+                <div className={`flex flex-col items-center text-[#812C27] text-[22px] sm:text-[25px] text-center font-black pt-2`}>
                     <h1>31K IN THE LONG RIDER POOL</h1>
                 </div>
         
-                <LinePlot />
-
+                <div className="sm:my-2"><LinePlot /></div>
+       
             {/* Buy Sell block*/}
               <BuySell />
 
                   {/* next block with vested info */}
-                  <div className="w-[330px]">
+                  <div className="w-[330px] sm:w-[380px]">
                   <VestedSlider />
                   
                   <div className="mt-4">

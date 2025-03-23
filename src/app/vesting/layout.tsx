@@ -1,12 +1,8 @@
-import Image from "next/image"
 import type { Metadata } from "next";
 // import localFont from "next/font/local";
 import { EB_Garamond } from 'next/font/google'
 import "../globals.css";
-import background from "../../images/background.png"
-import long_sign from "../../images/poster_long.png"
-import og_long_tan from "../../images/og_long_tan.png"
-
+import BackgroundVesting from "./backgroundVesting"
 
 const ebGaramond = EB_Garamond({
   subsets: ['latin'],
@@ -34,38 +30,8 @@ export default function RootLayout({
       <body
         className={`antialiased relative min-h-screen w-full ${ebGaramond.className}`}
       >
-        <div className="">
-          <div className="absolute top-0 left-0 w-full h-full min-h-screen">
-            <Image 
-                className="-z-10"
-                src={background}
-                alt="background image"
-                layout="fill"
-                objectFit="cover"
-                priority
-              />
-            <div className="absolute top-0 left-0 w-full h-full flex justify-center items-center">
-                <Image 
-                  className="z-2"
-                  src={long_sign}
-                  alt="sign background"
-                  width={500}
-                  priority
-                />
-            </div>
-
-            <div className="absolute top-0 left-0 w-full h-full flex justify-center items-center blur-md">
-                <Image 
-                  className="-z-1 w-[550px] h-[900px]"
-                  src={og_long_tan}
-                  alt="tan background"
-                  width={500}
-                  priority
-                />
-            </div>
-          </div>
-        </div>
-        <div className="z-10">{children}</div>
+        <BackgroundVesting />
+        <main className="z-10">{children}</main>
       </body>
     </html>
   );
