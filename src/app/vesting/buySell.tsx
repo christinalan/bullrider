@@ -163,6 +163,7 @@ export default function BuySell() {
           {isBuying ? "Quick Buy" : "Quick Sell"}
         </button>
       </div>
+
     </div>
   );
 }
