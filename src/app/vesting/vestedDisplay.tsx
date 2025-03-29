@@ -2,8 +2,6 @@ export default function VestedSlider() {
     // Dynamic vested data (replace with actual state when integrating)
     const vestedAmount = 1312; 
     const vestedPercentage = 52; // Dynamic percentage
-    const vestedRank = 1324;
-    const daysVested = 32
   
     return (
       <div className="w-full flex flex-col gap-3 text-center items-center">
@@ -19,10 +17,6 @@ export default function VestedSlider() {
             style={{ width: `${vestedPercentage}%` }} // Dynamically set width
           ></div>
         </div>
-
-        {/* Text about the holder */}
-        <h1 className="text-[#812C27] text-lg font-black leading-6"
-        >{`You've held for ${daysVested} and are the ${vestedRank}th longest holder.`}</h1>
       </div>
     );
   }

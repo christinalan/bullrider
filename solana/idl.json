@@ -1,0 +1,16 @@
+[
+    {
+        "name": "claimRewards",
+        "accounts": [
+            {
+                "name": "feePool",
+                "type": "account",
+                "isMut": true,
+                "isSigner": false
+            },
+            {
+                
+            }
+        ]
+    }
+]
