@@ -8,9 +8,8 @@ import star from "../../images/star.png";
 import LinePlot from "./graph";
 import VestedSlider from "./vestedDisplay";
 import BuySell from "./buySell";
-import { useSolana } from "@/hooks/useSolana";
+// import { useSolana } from "@/hooks/useSolana";
 import { useState } from "react";
-import { useEffect } from "react";
 
 const bullriderFont = localFont({
   src: "../../fonts/reward.ttf",
@@ -19,7 +18,7 @@ const bullriderFont = localFont({
 
 export default function Vesting() {
   // const { claimRewards, getFeePoolBalance } = useSolana();
-  const [poolBalance, setPoolBalance] = useState("31K");
+  const [poolBalance] = useState("31K");
 
   // useEffect(() => {
   //   const fetchPoolBalance = async () => {
