@@ -89,7 +89,7 @@ export default function BuySell() {
               setSelectedAmount(null);
               setAmount(null);
             }}
-            className={`w-1/2 pt-1 pb-2 ${isBuying ? "bg-[#812C27] text-[#D7BA94]" : "bg-transparent text-[#812C27]"}`}
+            className={`w-1/2 pt-1 pb-2 rounded-sm cursor-pointer ${isBuying ? "bg-[#812C27] text-[#D7BA94]" : "bg-transparent text-[#812C27]"}`}
           >
             Buy
           </button>

@@ -124,7 +124,7 @@ export default function Home() {
           <div className="flex w-full justify-center items-center pt-2 sm:pt-2">
             <button
               onClick={handleConnectWallet}
-              className={`${bullriderFont.className} text-[38px] sm:text-[50px] text-[#812C27] text-center rotate-[-5deg] sm:rotate-[-6deg] mt-[-8px] sm:mt-[8px] px-6 py-[2px] sm:py-[4px] outline outline-[3.6px] outline-[#812C27] leading-none cursor-pointer transition-transform duration-200 hover:scale-105 active:scale-95`}
+              className={`${bullriderFont.className} text-[38px] sm:text-[44px] md:text-[54px] text-[#812C27] text-center rotate-[-5deg] md:rotate-[-7deg] mt-[-8px] sm:mt-[8px] px-6 py-[2px] sm:py-[4px] outline outline-[3.6px] outline-[#812C27] leading-none cursor-pointer transition-transform duration-200 hover:scale-105 active:scale-95`}
             >
               Connect Wallet
             </button>
