@@ -23,6 +23,9 @@ const ebGaramond = EB_Garamond({
 export const metadata: Metadata = {
   title: "Bullrider",
   description: "Bullrider",
+  openGraph: {
+    images: ['/web_share.png']
+  }
 };
 
 

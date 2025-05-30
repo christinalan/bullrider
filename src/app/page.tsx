@@ -89,7 +89,7 @@ export default function Home() {
             <Image src={hand} alt="hand" width={30} priority className="scale-x-[-1]" />
           </div>
           {/* text block */}
-          <div className="flex flex-col justify-center items-start mx-auto sm:mt-2 text-[14px] sm:text-[14.5px] text-[#251F14] font-black w-[80%] sm:w-[80%] max-w-[400px] h-[220px] sm:h-[200px] leading-[1.1]">
+          <div className="flex flex-col justify-center items-start mx-auto xs:mt-4 sm:mt-2 -mt-2 text-[14px] sm:text-[14.5px] text-[#251F14] font-black w-[80%] sm:w-[80%] max-w-[400px] h-[220px] sm:h-[200px] leading-[1.1]">
             <div className="flex flex-col pt-0 gap-3">
               <div className="flex gap-4 items-start">
                 <Image src={star} alt="star" width={14} height={14} priority />
@@ -121,10 +121,10 @@ export default function Home() {
           </div>
 
           {/* connect wallet button */}
-          <div className="flex w-full justify-center items-center pt-4 sm:pt-6">
+          <div className="flex w-full justify-center items-center pt-2 sm:pt-2">
             <button
               onClick={handleConnectWallet}
-              className={`${bullriderFont.className} text-[38px] sm:text-[50px] text-[#812C27] text-center rotate-[-7deg] sm:rotate-[-9deg] mt-[-8px] sm:mt-[8px] px-6 py-[2px] sm:py-[4px] outline outline-[3.6px] outline-[#812C27] leading-none cursor-pointer transition-transform duration-200 hover:scale-105 active:scale-95`}
+              className={`${bullriderFont.className} text-[38px] sm:text-[50px] text-[#812C27] text-center rotate-[-5deg] sm:rotate-[-6deg] mt-[-8px] sm:mt-[8px] px-6 py-[2px] sm:py-[4px] outline outline-[3.6px] outline-[#812C27] leading-none cursor-pointer transition-transform duration-200 hover:scale-105 active:scale-95`}
             >
               Connect Wallet
             </button>
